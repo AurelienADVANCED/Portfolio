@@ -1,5 +1,5 @@
 # Étape de build
-FROM node:14 as build
+FROM node:18 as build
 
 # Définit le répertoire de travail dans le conteneur
 WORKDIR /app
