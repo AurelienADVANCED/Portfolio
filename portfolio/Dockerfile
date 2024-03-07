@@ -19,9 +19,6 @@ RUN npm run dev
 # Étape de run
 FROM nginx:stable-alpine as production
 
-# Copie les fichiers de build dans le répertoire de serveur Nginx
-COPY --from=build /app/build /usr/share/nginx/html
-
 # Expose le port 80
 EXPOSE 80
 
