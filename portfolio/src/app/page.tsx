@@ -210,7 +210,7 @@ export default function Component() {
 }
 
 
-function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
+function CodeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -230,7 +230,7 @@ function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
+function DatabaseIcon(props: any) {
   return (
     <svg
       {...props}
@@ -252,7 +252,7 @@ function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function SmartphoneIcon(props: React.SVGProps<SVGSVGElement>) {
+function SmartphoneIcon(props: any) {
   return (
     <svg
       {...props}
@@ -273,7 +273,7 @@ function SmartphoneIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function SmileIcon(props: React.SVGProps<SVGSVGElement>) {
+function SmileIcon(props: any) {
   return (
     <svg
       {...props}
@@ -296,7 +296,7 @@ function SmileIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function SquareIcon(props: React.SVGProps<SVGSVGElement>) {
+function SquareIcon(props: any) {
   return (
     <svg
       {...props}
