@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Construit l'application pour la production
-RUN npm run build
+RUN npm run dev
 
 # Étape de run
 FROM nginx:stable-alpine as production
