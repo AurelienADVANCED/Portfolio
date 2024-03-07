@@ -35,4 +35,4 @@ COPY --from=build /app/next.config.js ./next.config.js
 EXPOSE 80
 
 # Commande pour démarrer Nginx et servir l'application
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "dev"]
