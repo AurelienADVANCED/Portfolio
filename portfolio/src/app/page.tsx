@@ -166,7 +166,7 @@ export default function Component() {
                     <Link className="text-lg font-semibold hover:underline underline-offset-4" href="https://github.com/AurelienADVANCED" target="_blank">
                       GitHub
                     </Link>
-                    <Link className="text-lg font-semibold hover:underline underline-offset-4" href="/cv.pdf" target="_blank" download>
+                    <Link className="text-lg font-semibold hover:underline underline-offset-4" href="/CV.pdf" target="_blank">
                       CV
                     </Link>
                   </div>
