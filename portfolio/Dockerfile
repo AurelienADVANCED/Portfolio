@@ -25,11 +25,11 @@ WORKDIR /app
 
 # Copie les fichiers de build dans le répertoire de serveur Nginx
 # Note: Next.js génère le dossier `.next` après le build. Assurez-vous de copier ce répertoire et les fichiers nécessaires pour servir l'application
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/next.config.js ./next.config.js
+COPY --from=build /app/public ./public
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/next.config.js ./next.config.js
 
 # Expose le port 80
 EXPOSE 80
