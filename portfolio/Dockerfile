@@ -16,16 +16,18 @@ COPY . .
 # Construit l'application pour la production
 RUN npm run dev
 
-FROM node:18-alpine
+# Étape de production
+FROM nginx:stable-alpine as production
 
-WORKDIR /app
+# Copie les fichiers de build dans le répertoire de serveur Nginx
+# Note: Next.js génère le dossier `.next` après le build. Assurez-vous de copier ce répertoire et les fichiers nécessaires pour servir l'application
+COPY --from=build /app/public /usr/share/nginx/html
+COPY --from=build /app/.next /usr/share/nginx/html/.next
+COPY --from=build /app/src /usr/share/nginx/html/src
 
-COPY --from=build /app/next.config.js ./
-COPY --from=build /app/public ./public
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/package.json ./package.json
-
+# Ajoute la configuration de Nginx pour servir les fichiers statiques de Next.js
+# Assurez-vous d'avoir un fichier de configuration pour Nginx qui gère la redirection et la gestion des routes de Next.js
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 # Expose le port 80
 EXPOSE 80
 
