@@ -14,7 +14,6 @@ export default function Component() {
         <div className="py-4 bg-gray-00 text-gray-50">
           <div className="container flex items-center justify-between px-4 md:px-6 space-y-2 md:space-y-0">
             <Link className="flex items-center space-2" href="#">
-              <SquareIcon className="h-6 w-6" />
               <span className="font-semibold">Portfolio</span>
             </Link>
             <nav className="items-center gap-4 sm:gap-6 space-x-6">
@@ -293,25 +292,4 @@ function SmileIcon(props: any) {
       <line x1="15" x2="15.01" y1="9" y2="9" />
     </svg>
   )
-}
-
-interface SquareIconProps extends React.SVGProps<SVGSVGElement> {}
-
-function SquareIcon(props: SquareIconProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-    </svg>
-  );
 }
