@@ -25,9 +25,6 @@ COPY --from=build /app/public /usr/share/nginx/html
 COPY --from=build /app/.next /usr/share/nginx/html/.next
 COPY --from=build /app/src /usr/share/nginx/html/src
 
-# Ajoute la configuration de Nginx pour servir les fichiers statiques de Next.js
-# Assurez-vous d'avoir un fichier de configuration pour Nginx qui gère la redirection et la gestion des routes de Next.js
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 # Expose le port 80
 EXPOSE 80
 
