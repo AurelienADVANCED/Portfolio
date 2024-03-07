@@ -20,7 +20,6 @@ COPY --from=build /app/.next ./.next
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./package.json
 
-# Expose le port 80
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["npm", "start"]
